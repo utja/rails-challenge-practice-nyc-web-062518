@@ -5,7 +5,6 @@
 <ul>
   <li><%= building.name %></li>
   <li><%= building.number_of_floors %></li>
-  <li><%= building.available_floors %></li>
   <ul>
     <% building.offices.each do |office| %>
     <li><%= office.floor %></li>
@@ -14,11 +13,3 @@
 </ul>
 
 <% end %>
-Floors Available:
-
-2
-3
-4
-6
-7
-8

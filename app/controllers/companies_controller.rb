@@ -8,6 +8,7 @@ end
 
 def new
   @company = Company.new
+
 end
 
 def create
