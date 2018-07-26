@@ -1,0 +1,13 @@
+Show this building's info  <br>
+
+<%= @building.name %>  <br>
+<%= @building.country %>  <br>
+<%= @building.address %>  <br>
+<%= @building.rent_per_floor %>  <br>
+<%= @building.number_of_floors %>  <br>
+<% @building.companies.each do |company| %>
+<%=company.name  %>
+
+<% end %>
+<h2> This building's current rent total is: </h2>
+$ <%= @building.current_rent %>

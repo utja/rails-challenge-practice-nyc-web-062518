@@ -6,6 +6,7 @@ class BuildingsController < ApplicationController
   end
 
   def show
+    @building = Building.find(params[:id])
   end
 
   def edit
@@ -17,7 +18,7 @@ class BuildingsController < ApplicationController
     @building = Building.find(params[:id])
     @building.update(building_params)
     if @building.save
-      redirect_to @building
+      redirect_to building_path(@building)
     else
       render :edit
     end
